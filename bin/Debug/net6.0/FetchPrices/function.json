@@ -1,0 +1,32 @@
+{
+  "generatedBy": "Microsoft.NET.Sdk.Functions.Generator-4.1.1",
+  "configurationSource": "attributes",
+  "bindings": [
+    {
+      "type": "timerTrigger",
+      "schedule": "0 */10 * * * *",
+      "useMonitor": true,
+      "runOnStartup": false,
+      "name": "myTimer"
+    },
+    {
+      "type": "signalR",
+      "hubName": "coinprices",
+      "connectionStringSetting": "AzureSignalRConnectionString",
+      "name": "signalRMessages"
+    },
+    {
+      "type": "cosmosDB",
+      "connectionStringSetting": "CosmosDBConnection",
+      "databaseName": "CoinPricesDB",
+      "collectionName": "CoinPrices",
+      "createIfNotExists": false,
+      "useMultipleWriteLocations": false,
+      "useDefaultJsonSerialization": false,
+      "name": "coinsOut"
+    }
+  ],
+  "disabled": false,
+  "scriptFile": "../bin/Functions.dll",
+  "entryPoint": "Fetch.Function.FetchPrices.Run"
+}

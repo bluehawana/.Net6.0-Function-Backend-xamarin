@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "DefaultEndpointsProtocol=https;AccountName=hzexb13e;AccountKey=LhdJvdWjjlZZzjUn42k5wzx1eEotVJUSBpkxlUzdY3Pa3uhCjjpKbIrbn9xujbBSPm1z26bXk+gi+AStjPvJAw==;EndpointSuffix=core.windows.net",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+     "CosmosDBConnection": "AccountEndpoint=https://coins.documents.azure.com:443/;AccountKey=8RV426RZa8tqF0O6qqxdT3e0fM04KkDXCN3G850bJ9Kyhqm82XRXOtcXEQv6yeloZ8u0hraiugnQACDbuOvqmw==",
+     "AzureSignalRConnectionString": "Endpoint=https://cryptowallet.service.signalr.net;AccessKey=1/4s1JU6eMcS/3HNlI/QAZ9c3GcDCX+cPHeeVyBGGHU=;Version=1.0;"
+  }
+}
