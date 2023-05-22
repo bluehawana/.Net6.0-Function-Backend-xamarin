@@ -1,11 +1,10 @@
 using System;
-using System.Text.Json;
 using System.Net.Http;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Extensions.SignalRService;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json.Linq;
 
 namespace Fetch.Function
 {
@@ -13,7 +12,7 @@ namespace Fetch.Function
     {
         [FunctionName("FetchPrices")]
         public async static Task Run(
-            [TimerTrigger("0 */10 * * * *")] TimerInfo myTimer,
+            [TimerTrigger("0 */2 * * * *")] TimerInfo myTimer,
             [SignalR(HubName = "coinprices")] IAsyncCollector<SignalRMessage> signalRMessages,
             [CosmosDB(
                 databaseName: "CoinPricesDB",
@@ -25,6 +24,7 @@ namespace Fetch.Function
 
             using (var httpClient = new HttpClient())
             {
+                httpClient.DefaultRequestHeaders.Add("User-Agent", "CoinsTracker/1.0");
                 var coinData = await httpClient.GetAsync("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false");
                 log.LogInformation($"API call status: {coinData.StatusCode}");
                 var body = await coinData.Content.ReadAsStringAsync();
@@ -47,7 +47,7 @@ namespace Fetch.Function
                         new SignalRMessage
                         {
                             Target = "updated",
-                            Arguments = new[] { JObject.FromObject(prices) }
+                            Arguments = new[] { prices }
                         });
                 }
             }

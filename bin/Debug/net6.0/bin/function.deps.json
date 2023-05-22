@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Functions/1.0.0": {
         "dependencies": {
+          "Microsoft.Azure.Functions.Analyzers": "1.0.0",
           "Microsoft.Azure.Functions.Worker": "1.14.1",
           "Microsoft.Azure.WebJobs.Extensions.CosmosDB": "3.0.10",
           "Microsoft.Azure.WebJobs.Extensions.SignalRService": "1.10.0",
@@ -388,12 +389,12 @@
           "runtimes/win7-x64/native/Cosmos.CRTCompat.dll": {
             "rid": "win7-x64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "2.0.0.0"
           },
           "runtimes/win7-x64/native/Microsoft.Azure.Documents.ServiceInterop.dll": {
             "rid": "win7-x64",
             "assetType": "native",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "2.13.1.0"
           }
         }
       },
