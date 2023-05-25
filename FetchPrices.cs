@@ -13,7 +13,7 @@ namespace Fetch.Function
         [FunctionName("FetchPrices")]
         public async static Task Run(
             [TimerTrigger("0 */2 * * * *")] TimerInfo myTimer,
-            [SignalR(HubName = "coinprices")] IAsyncCollector<SignalRMessage> signalRMessages,
+            [SignalR(HubName = "CoinPrices")] IAsyncCollector<SignalRMessage> signalRMessages,
             [CosmosDB(
                 databaseName: "CoinPricesDB",
                 collectionName: "CoinPrices",
@@ -35,8 +35,8 @@ namespace Fetch.Function
                 {
                     foreach (var coin in prices)
                     {
-                        // Log the coin symbol
-                        log.LogInformation(coin.symbol);
+                        // Log the coin id
+                        log.LogInformation(coin.id);
 
                         // Add the coin price to Cosmos DB
                         await coinsOut.AddAsync(coin);
