@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BLUEH\\source\\repos\\AZfunctions\\azfunctions\\Functions.csproj": {}
+    "/Users/lihongzhi/Projects/AzFuntions/azfunctions/Functions.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BLUEH\\source\\repos\\AZfunctions\\azfunctions\\Functions.csproj": {
+    "/Users/lihongzhi/Projects/AzFuntions/azfunctions/Functions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BLUEH\\source\\repos\\AZfunctions\\azfunctions\\Functions.csproj",
+        "projectUniqueName": "/Users/lihongzhi/Projects/AzFuntions/azfunctions/Functions.csproj",
         "projectName": "Functions",
-        "projectPath": "C:\\Users\\BLUEH\\source\\repos\\AZfunctions\\azfunctions\\Functions.csproj",
-        "packagesPath": "C:\\Users\\BLUEH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BLUEH\\source\\repos\\AZfunctions\\azfunctions\\obj\\",
+        "projectPath": "/Users/lihongzhi/Projects/AzFuntions/azfunctions/Functions.csproj",
+        "packagesPath": "/Users/lihongzhi/.nuget/packages/",
+        "outputPath": "/Users/lihongzhi/Projects/AzFuntions/azfunctions/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\BLUEH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/lihongzhi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
         }
       }
     }
