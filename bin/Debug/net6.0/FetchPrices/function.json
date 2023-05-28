@@ -4,14 +4,14 @@
   "bindings": [
     {
       "type": "timerTrigger",
-      "schedule": "0 */2 * * * *",
+      "schedule": "0 */5 * * * *",
       "useMonitor": true,
       "runOnStartup": false,
       "name": "myTimer"
     },
     {
       "type": "signalR",
-      "hubName": "coinprices",
+      "hubName": "CoinPrices",
       "connectionStringSetting": "AzureSignalRConnectionString",
       "name": "signalRMessages"
     },

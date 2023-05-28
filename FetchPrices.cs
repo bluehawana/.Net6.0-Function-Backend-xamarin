@@ -12,7 +12,7 @@ namespace Fetch.Function
     {
         [FunctionName("FetchPrices")]
         public async static Task Run(
-            [TimerTrigger("0 */2 * * * *")] TimerInfo myTimer,
+            [TimerTrigger("0 */5 * * * *")] TimerInfo myTimer,
             [SignalR(HubName = "CoinPrices")] IAsyncCollector<SignalRMessage> signalRMessages,
             [CosmosDB(
                 databaseName: "CoinPricesDB",
